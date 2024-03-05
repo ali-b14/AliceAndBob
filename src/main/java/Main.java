@@ -7,24 +7,34 @@
 import java.util.Scanner;
 
 public class Main {
-    Scanner s = new Scanner(System.in);
+    static Scanner s = new Scanner(System.in);
+
     public static void main(String[] args ){
          // create a new object of class Main
-
+        Main object = new Main();
         // call the compute() method on that new object
+        //String username = compute();
+        String userinput = object.compute();
     }
 
-    public void compute() {
+    public String compute() {
         // Get input string of name from user
-        System.out.print("what is your first name?");
+        // Create conditional to check name against Alice and Bob
+        // Print greeting to screen if Alice or Bob are true
+        // Print "You are neither Alice nor Bob." otherwise
+
+        System.out.println("what is your first name?");
         String name = s.nextLine();
         
-        // Create conditional to check name against Alice and Bob
+        if(name.equals("Alice") || (name.equals("Bob"))){
+            System.out.println("Hello " + name);
+        } else {
+            System.out.println("You are neither Alice nor Bob. ");
+        }
+        return name;
+
         
 
-        // Print greeting to screen if Alice or Bob are true
-        
-        // Print "You are neither Alice nor Bob." otherwise
 
     }
 } //made a comment
